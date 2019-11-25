@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+Item.destroy_all
+
+10.times do
+  item = Item.create(
+    title: Faker::Book.title,
+    description: Faker::Movies::Hobbit.quote,
+    price: Faker::Number.decimal(l_digits: 2),
+    image_url: Faker::Avatar.image
+  )
+end
