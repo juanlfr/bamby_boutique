@@ -16,4 +16,3 @@
 //= require main
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
