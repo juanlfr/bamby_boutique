@@ -1,2 +1,27 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+
+
+<section>
+<div class="card-deck">
+<% @items.each do |item|%>
+<div class="col-sm-4 mb-3">
+<div class="card">
+  <div class="card-header">
+    Photo chaton # <%=item.id%><br>
+
+  </div>
+  <div class="card-body align-center">
+    <blockquote class="blockquote mb-0">
+      <p><%=item.title%></p>
+      <footer class="blockquote-footer">
+      <div class="row justify-content-between align-self-center mx-3">
+        <p><%= item.price %></p>
+        <a class="btn btn-info" <%= link_to "Voir plus", item_path(item.id)%></a>
+      </div>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+</div>
+<%end%>
+</div>
+</section>
