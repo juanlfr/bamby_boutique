@@ -1,11 +1,5 @@
 class LineItemsController < ApplicationController
 
-	def index
-	end
-
-	def new
-	end
-
 	def create
  	  chosen_item = Item.find(params[:item_id])
 	 	@cart = current_user.cart
