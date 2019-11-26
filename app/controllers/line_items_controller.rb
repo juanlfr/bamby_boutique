@@ -16,7 +16,7 @@ class LineItemsController < ApplicationController
 	  end
 
 	  @line_item.save
-	  redirect_to root_path
+	  redirect_to cart_path(@cart.id)
 	end
 
 	def destroy
