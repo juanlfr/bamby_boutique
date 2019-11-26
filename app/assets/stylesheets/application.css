@@ -16,6 +16,7 @@
  *= require font-awesome
  */
 
+ 
 .stext-400 {
   font-family: Poppins-Regular;
   font-size: 1.2em;
@@ -40,3 +41,4 @@
 .white:hover {
   color:grey !important;
 }
+
