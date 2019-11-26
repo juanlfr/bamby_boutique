@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
 
 	def create
- 	  chosen_item = Item.find(13)
+ 	  chosen_item = Item.find(params[:item_id])
 	 	@cart = current_user.cart
 
 	 	#if item has already been added to the cart,increase the quantity of the dedicated item_line
@@ -19,5 +19,10 @@ class LineItemsController < ApplicationController
 	  redirect_to cart_path(@cart)
 	end
 
+	def destroy
+		@line_item_to_destroy = LineItem.find(params[:line_item_id])
+		@line_item_to_destroy.destroy
+		redirect_to cart_path(current_user.cart)
+	end
 
 end
