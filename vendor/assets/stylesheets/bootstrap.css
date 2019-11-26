@@ -3610,7 +3610,7 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-brand {
-  color: white;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
