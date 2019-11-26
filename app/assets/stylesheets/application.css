@@ -16,6 +16,16 @@
  *= require font-awesome
  */
 
+#contenu {
+  min-height: 100%;
+}
+
+#footer {
+  padding-bottom: 32px;
+  padding-top: 75px;
+  background-color: #222;
+}
+
 .stext-400 {
   font-family: Poppins-Regular;
   font-size: 1.2em;
