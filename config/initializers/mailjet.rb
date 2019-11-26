@@ -2,7 +2,7 @@
 Mailjet.configure do |config|
   config.api_key = '164ccbf592bd054b2d3e0785a8383167'
   config.secret_key = 'f355547b8dc1664a180fe8f9b24c7db1'
-  config.default_from = 'argudo.daniel@gmail.comm'
+  config.default_from = 'argudo.daniel@gmail.com'
   # Mailjet API v3.1 is at the moment limited to Send API.
   # We’ve not set the version to it directly since there is no other endpoint in that version.
   # We recommend you create a dedicated instance of the wrapper set with it to send your emails.
@@ -23,9 +23,9 @@ variable = Mailjet::Send.create(messages: [{
       'Name'=> 'Daniel'
     }
   ],
-  'Subject'=> 'Bienvenue de la belle boutique',
-  'TextPart'=> 'Bienvenue',
-  'HTMLPart'=> '<h3>Bienvenue dans la boutique de beaux chatons <a href=\'https:/https://bamby-boutique-development.herokuapp.com/\'> Bamby boutique</a>!</h3><br /> Que le chat soit avec vous!',
+  'Subject'=> 'Bienvenue ',
+  'TextPart'=> 'Bienvenue, ',
+  'HTMLPart'=> '<h3>Bienvenue dans la boutique des beaux chatons <a href=\'https://bamby-boutique-development.herokuapp.com/\'> Bambyboutique</a>!</h3><br /> A bientôt sur notre site!',
   'CustomID' => 'AppGettingStartedTest'
 }]
 )
