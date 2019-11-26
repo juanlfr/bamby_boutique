@@ -13,4 +13,18 @@
  *= require bootstrap
  *= require main
  *= require util
+ *= require font-awesome
  */
+
+.stext-400 {
+  font-family: Poppins-Regular;
+  font-size: 1.2em;
+  line-height: 1.466667;
+}
+
+.stext-401 {
+  font-family: Poppins-Regular;
+  font-size: 1em;
+  line-height: 1.466667;
+  letter-spacing: 1px;
+}
