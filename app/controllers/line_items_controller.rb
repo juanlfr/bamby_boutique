@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
 
 	def create
- 	  chosen_item = Item.find(params[:item_id])
+ 	  chosen_item = Item.find(params[:id])
 	 	@cart = current_user.cart
 
 	 	#if item has already been added to the cart,increase the quantity of the dedicated item_line
