@@ -32,3 +32,11 @@
 .margin-menu {
   margin-left: -50px;
 }
+
+.white {
+  color: white !important;
+}
+
+.white:hover {
+  color:grey !important;
+}
