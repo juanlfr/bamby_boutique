@@ -22,7 +22,7 @@ class LineItemsController < ApplicationController
 	def destroy
 		@line_item_to_destroy = LineItem.find(params[:line_item_id])
 		@line_item_to_destroy.destroy
-		redirect_to cart_path(current_user.cart)
+		redirect_to cart_path(current_user.cart.id)
 	end
 
 end
