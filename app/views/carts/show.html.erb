@@ -38,7 +38,7 @@
 										</div>
 									</td>
 									<td class="column-5">A calculer...</td>
-									<td> <%= link_to line_item_path(:line_item_id => line_item.id), method: :delete, data: { confirm: "Voulez-vous supprimer ce produit de votre pannier ?" } do %> <i class="fa fa-trash"></i>
+									<td> <%= button_to line_item_path(:line_item_id => line_item.id), method: :delete, data: { confirm: "Voulez-vous supprimer ce produit de votre pannier ?" } do %> <i class="fa fa-trash"></i>
             			<%end%></td>
 								</tr>
 								<%end%>
