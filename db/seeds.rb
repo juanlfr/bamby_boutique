@@ -9,7 +9,7 @@
 require 'faker'
 
 Item.destroy_all
-User.destroy_all
+LineItem.destroy_all
 
 10.times do
   item = Item.create(
