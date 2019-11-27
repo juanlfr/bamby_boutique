@@ -13,7 +13,6 @@
 
 //= require jquery_ujs
 //= require jquery
-//= require jquery-3.2.1.min
 //= require main
 //= require rails-ujs
 //= require activestorage
