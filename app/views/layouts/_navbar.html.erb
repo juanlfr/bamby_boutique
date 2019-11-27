@@ -22,7 +22,7 @@
       </a>
       <div class="dropdown-menu margin-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" <%= link_to "Mon profil", current_user %></a>
-        <a class="dropdown-item" <%= link_to "Mon panier", cart_path %></a>
+        <a class="dropdown-item" <%= link_to "Mon panier", cart_path(current_user.cart.id) %></a>
         <a class="dropdown-item"> <%= button_to "Se déconnecter", destroy_user_session_path,  method: :delete %></a>
       </div>
     </div>
