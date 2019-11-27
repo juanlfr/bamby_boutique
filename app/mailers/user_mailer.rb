@@ -5,27 +5,21 @@ class UserMailer < ApplicationMailer
         headers['X-MJ-EventPayload'] = 'custom payload'
             @user = current_user
             @url  = 'http://localhost:3000/users/sign_up'
-          #@url  = 'https://bamby-boutique-development.herokuapp.com/users'
+            #pour PROD:  @url  = 'https://bamby-boutique-development.herokuapp.com/users'
             mail(
                 from: 'argudo.daniel@gmail.com',
                 to: @user.email,
-                subject: "Bambyboutique"
+                subject: "Bienvenue dans Bambyboutique!"
                 )
-        #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
-        #@user = current_user
-    
-        #on définit une variable @url qu'on utilisera dans la view d’e-mail
-        #@url  = 'http://localhost:3000/users/sign_up'
-        
-
-        #mail(to: @user.email, subject: 'Bienvenue dans la boutique de chatons')
     end
 
-    #def buy_email
-        #@user = params[:user]
+     #def order_email(current_user)
+        #@user = current_user
+        #mail(
+            #from: 'argudo.daniel@gmail.com'
+            #to: @user.email,
+            #subject: 'Bambyboutique, Merci pour votre achat!') 
         # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-        #mail(to: @user.email, subject: 'Merci pour votre achat') 
+ 
    #end
-
-  
 end

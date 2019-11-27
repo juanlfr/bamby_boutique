@@ -1,4 +1,9 @@
-#<p>Hello <%= @email %>!</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
 <p>Bonjour <%= @email %>!</p>
 
 <% if @resource.try(:unconfirmed_email?) %>
@@ -8,3 +13,8 @@
 
   <p>Nous vous contactons pour vous informer que votre email a été changé à <%= @resource.email %>.</p>
 <% end %>
+<br>
+<p> À très vite sur <a href='https://bamby-boutique-development.herokuapp.com/'> Bambyboutique</a>!<br />
+ <br>L'équipe de Bambyboutique',
+  </body>
+</html>
