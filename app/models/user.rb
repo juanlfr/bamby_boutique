@@ -7,10 +7,12 @@ class User < ApplicationRecord
   has_one :cart
   after_create :init_cart
 
+  has_many :orders 
+
 
   def init_cart
     self.create_cart!
   end
 
-  
+
 end
