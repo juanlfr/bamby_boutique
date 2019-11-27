@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bonjour <%= @user.email %> et bienvenue chez Bambyboutique !</h1>
+    <p>Vous avez effectué un achat sur notre site et nous vous remercions pour votre confiance.</p>
+    <br>
+    <p>Numéro de commande: <%= @order.id %></p>
+  <p>Articles commandés :
+
+  <ul> <%= @order.order_items.each do |order_item| %>
+    <li> <% order_item.item.title %>
+    </li>
+    <%end%>
+  </ul>
+
+
+    <p><center>
+      Pour regarder toutes vos commandes, vous pouvez accéder à votre espace client, <a href= 'https://bamby-boutique-development.herokuapp.com/devise/sign_in'> en cliquant ici.</a>.
+    </center></p>
+    <br>
+    <p>Merci ! </p>
+    <br>
+    <p> À très vite sur <a href='https://bamby-boutique-development.herokuapp.com/'> Bambyboutique</a>!<br />
+ <br>
+ L'équipe de Bambyboutique',
+  </body>
+</html>
