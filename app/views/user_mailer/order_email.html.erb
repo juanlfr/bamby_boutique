@@ -7,11 +7,13 @@
     <h1>Bonjour <%= @user.email %> et bienvenue chez Bambyboutique !</h1>
     <p>Vous avez effectué un achat sur notre site et nous vous remercions pour votre confiance.</p>
     <br>
-    <p>Numéro de commande: <%= order.id %></p>
+    <p>Numéro de commande: <%= @order.id %></p>
   <p>Articles commandés :
-  <ul>
-    <li>
+
+  <ul> <%= @order.order_items.each do |order_item| %>
+    <li> <% order_item.item.title %>
     </li>
+    <%end%>
   </ul>
 
 
