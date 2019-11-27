@@ -1,0 +1,24 @@
+<br/>
+<div class="d-flex justify-content-center">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Mon compte</h3>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <ul>
+                    <li class="h5">Nom : </li>
+                    <li class="h5">Prénom : </li>
+                    <li class="h5">Adresse : </li>
+                    <li class="h5">Email : <%= @user.email %></li>
+                    <li class="h5">Téléphone : </li>
+                </ul>
+            </div>
+            <br />
+            <a href="<%= root_path %>" class="btn btn-primary">Revenir aux produits</a>
+        </div>
+        <div class="card-footer text-muted">
+            Compte créé le <%= @user.created_at %>
+        </div>
+    </div>
+</div>

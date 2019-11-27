@@ -11,8 +11,11 @@
 // about supported directives.
 //
 
-//= require jquery-3.2.1.min
-//= require bootstrap
+//= require jquery_ujs
+//= require jquery
 //= require main
 //= require rails-ujs
 //= require activestorage
+//= require bootstrap
+
+

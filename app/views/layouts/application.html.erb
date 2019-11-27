@@ -10,7 +10,11 @@
   <body>
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/flash'%>
+    <div id="contenu">
     <%= yield %>
+    </div>
+    <div id="footer">
     <%= render 'layouts/footer'%>
+    </div>
   </body>
 </html>
