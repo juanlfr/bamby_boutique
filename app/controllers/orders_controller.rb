@@ -13,4 +13,8 @@ before_action :authenticate_user!
     @order = Order.new
   end
 
+  def create
+  end
+
+
 end

@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
 #<p>Welcome <%= @email %>!</p>
 <p>Bienvenue <%= @email %>!</p>
 
@@ -5,3 +11,8 @@
 <p>Vous pouvez confirmer votre compte email par le lien ci-desous:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<br>
+<p> À très vite sur <a href='https://bamby-boutique-development.herokuapp.com/'> Bambyboutique</a>!<br />
+ <br>L'équipe de Bambyboutique',
+  </body>
+</html>
