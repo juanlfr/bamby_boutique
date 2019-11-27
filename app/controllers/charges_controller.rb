@@ -1,4 +1,7 @@
 class ChargesController < ApplicationController
+before_action :authenticate_user!
+before_action :secret
+
   def new
   end
 
