@@ -1,6 +1,5 @@
 class LineItemsController < ApplicationController
 before_action :authenticate_user!
-before_action :secret
 
 	def create
  	  chosen_item = Item.find(params[:id])
