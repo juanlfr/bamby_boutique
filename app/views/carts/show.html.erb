@@ -23,7 +23,7 @@
 										</div>
 									</td>
 									<td class="column-2"><%=Item.find(line_item.item_id).title%></td>
-									<td class="column-3"><%=Item.find(line_item.item_id).price%></td>
+									<td class="column-3"><%=Item.find(line_item.item_id).price%> €</td>
 									<td class="column-4">
 										<div class="wrap-num-product flex-w m-l-auto m-r-0">
 											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
@@ -37,16 +37,39 @@
 											</div>
 										</div>
 									</td>
-									<td class="column-5">A calculer...</td>
+									<td class="column-5"><%= line_item.total_by_item%> €</td>
 									<td> <%= button_to line_item_path(:line_item_id => line_item.id), method: :delete, data: { confirm: "Voulez-vous supprimer ce produit de votre pannier ?" } do %> <i class="fa fa-trash"></i>
             			<%end%></td>
 								</tr>
 								<%end%>
 
+								<tr class="table_row">
+									<td class="column-1"></td>
+									<td class="column-2"></td>
+									<td class="column-3"></td>
+									<td class="column-4">
+										<div class="size-208">
+											<span class="mtext-101 cl2">Total:
+											</span>
+										</div>
+									</td>
+									<td colspan="2" class="column-5">
+										<div class="size-209 p-t-1">
+											<span class="mtext-110 cl2"><%= @cart.total_cart%> €</span>
+										</div>
+									</td>
+									<td> </td>
+								</tr>
+
 							</table>
+					
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</form>
+
+		<div class="container">
+				<button type="button" class="btn btn-primary">Valider ma commande</button>
+		</div>
