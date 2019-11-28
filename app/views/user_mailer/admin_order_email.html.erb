@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  <h2>Bonjour,
+    <br>
+    Un nouvel achat a été effectué par le client <%=@user %>, le <%= @order.created_at %>  sur le site de la boutique Bamby-boutique! </h2>
+    <br>
+    <p>Numéro de commande: <%= @order.id %></p>
+    <p>Articles commandés :
+    <center>
+    <ul> <%= @order.order_items.each do |order_item| %>
+    <li> <% order_item.item.title %></li>
+    <%end%>
+    </ul>
+    <br>
+    <h1>Veuillez effetuer l'expédition rapidement!</h1>
+    <br>
+    <p>Merci !</p>
+    <br>
+    <br>
+ L'Administrateur,
+  </body>
+</html>

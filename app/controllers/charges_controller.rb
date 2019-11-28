@@ -1,4 +1,6 @@
 class ChargesController < ApplicationController
+  require 'faker'
+
 before_action :authenticate_user!
 after_action :init_order, only: [:create]
 
@@ -36,6 +38,7 @@ after_action :init_order, only: [:create]
   def init_order
     @order = Order.new
     @order.user = current_user
+    @order.order_reference = Faker::Number.number(digits: 10)
     @order.save
     current_user.cart.line_items.each do |line_item|
       order_items_transfer(line_item, @order)
