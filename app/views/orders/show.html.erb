@@ -1,20 +1,42 @@
-<div class="container">
-<br>
-<div class="card">
-    <div class="card-header">
-      <h4>Ma commande</h4>
-      </div>
+<br/>
+    <div class="container">
+        <div class="p-b-10">
+            <h4 class="ltext-103 cl5">
+                Ma commande
+            </h4>
+            <hr>
+        </div>
+        <div>
+          <p><b>Numéro de commande :</b> <%= @order.order_reference %></p>
+          <p><b>Article(s) commandé(s) le :</b> <%= @order.created_at.to_date%></p>
+        </div>
+        <br/>
+        <div class="row isotope-grid">
+            <% @order_items_array.each do |item|%>
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <%= image_tag Item.find(item.item_id).image_url %>
+                    </div>
 
-  <p><b>Numéro de commande:</b> <%= @order.order_reference %></p>
-  <p><b>Article commandé le:</b> <%= @order.created_at.to_date%></p>
-  <ul>
-  <% @order_items_array.each do |item|%>
-    <li><b>Titre:</b><%=Item.find(item.item_id).title %></li>
-    <li><b>Prix: </b><%=Item.find(item.item_id).price %> euros </li>
-    <li><b>Description:</b> <%=Item.find(item.item_id).description %></li>
-    <li><%= image_tag Item.find(item.item_id).image_url %></li><br>
-    <% end %>
-
-  </ul>
-</div>
-</div>
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="" class="stext-400 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                <%=Item.find(item.item_id).title %>
+                            </a>
+                            <span class="stext-401 cl3">
+                                <%=Item.find(item.item_id).price %> €
+                            </span>
+                            <p class="trait"></p><br/>
+                            <p><%=Item.find(item.item_id).description %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%end%>
+        </div>
+        <div class="actions mt-4 d-flex justify-content-start">
+        <a href="<%= user_path(current_user) %>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">Revenir au profil</a>
+        </div>
+    </div>
