@@ -26,6 +26,9 @@ after_action :init_order, only: [:create]
       description: 'Rails Stripe customer',
       currency: 'usd',
     })
+    
+    flash[:success] = "Paiement effectué avec succès ! Votre article a été envoyé par mail !"
+    redirect_to root_path
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
@@ -45,11 +48,11 @@ after_action :init_order, only: [:create]
     end
   end
 
-  def order_items_transfer(line_item, current_order)    
+  def order_items_transfer(line_item, current_order)
     line_order = OrderItem.new
     line_order.order = current_order
     line_order.item = line_item.item
-    line_order.quantity = line_item.quantity 
+    line_order.quantity = line_item.quantity
     line_order.save
     line_item.destroy
   end

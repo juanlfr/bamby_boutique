@@ -6,12 +6,12 @@ class UserMailer < ApplicationMailer
             @user = current_user
             #on localhost:
             #@url  = 'http://localhost:3000/users/sign_up'
-            #on PRODuction mode:
-            @url  = 'https://bamby-boutique-development.herokuapp.com/users'
+            #on PRODUCTION mode:
+            @url  = 'https://bamby-boutique.herokuapp.com/users'
             mail(
                 from: 'bamby.boutique.thp@gmail.com',
                 to: @user.email,
-                subject: "Bienvenue dans Bambyboutique!"
+                subject: "Bienvenue dans Bamby-boutique!"
                 )
     end
 
@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
         mail(
             from: 'bamby.boutique.thp@gmail.com',
             to: @user.email,
-            subject: 'Bambyboutique, Merci pour votre achat!'
+            subject: 'Bamby-boutique: merci pour votre achat!'
             ) 
     end
 
@@ -37,7 +37,7 @@ class UserMailer < ApplicationMailer
         mail(
             from: 'bamby.boutique.thp@gmail.com',
             to: 'bamby.boutique.thp@gmail.com',
-            subject: 'ADMIN: Un nouvel achat a été effectué sur le site'
+            subject: ':ADMIN: Nouvel achat à expédier'
             ) 
     end
 

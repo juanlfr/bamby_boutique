@@ -4,24 +4,27 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Bonjour <%= @user.email %> et bienvenue chez Bambyboutique !</h1>
-    <p>Vous avez effectué un achat sur notre site et nous vous remercions pour votre confiance.</p>
+
+    <p>Bonjour <%= @user.email %>,</p>
     <br>
-    <p>Numéro de commande: <%= @order.id %></p>
+    <p>Vous avez effectué un achat le <%= @order.created_at.strftime("%d/%m/%Y à %k:%M") %> sur notre site et nous vous remercions pour votre confiance.</p>
+    <br>
+    <p>Numéro de commande: <%= @order.order_reference %></p>
     <p>Articles commandés :
-    <center>
-    <ul> <%= @order.order_items.each do |order_item| %>
-    <li> <% order_item.item.title %></li>
+    <ul> <% @order.order_items.each do |order_item| %>
+    <li> <%= order_item.item.title %></li>
     <%end%>
     </ul>
     <br>
-    <p>Pour regarder toutes vos commandes, vous pouvez accéder à votre espace client, <a href= 'https://bamby-boutique-development.herokuapp.com/devise/sign_in'> en cliquant ici.</a>.
+
+    <p>Pour consulter toutes vos commandes, vous pouvez accéder à votre espace client. <a href= 'https://bamby-boutique.herokuapp.com/devise/sign_in'> en cliquant ici</a>.
     </p>
     <br>
-    <p>Merci ! </p>
+    <p>Merci !</p>
     <br>
-    <p> À très vite sur <a href='https://bamby-boutique-development.herokuapp.com/'> Bambyboutique</a>!<br />
+    <p> À très vite sur <a href='https://bamby-boutique.herokuapp.com/'> Bambyboutique!</a></p>
     <br>
-    L'équipe de Bamby-boutique',
+    <br>
+    L'équipe de Bamby-boutique,
     </body>
 </html>

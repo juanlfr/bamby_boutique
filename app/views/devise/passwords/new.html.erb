@@ -15,15 +15,15 @@
             </div>
 
             <div class="actions d-flex justify-content-center">
-                <%= f.submit "M'envoyer un nouveau mot de passe", class: "form-control", class: "btn btn-lg btn-primary" %>
+                <%= f.submit "M'envoyer un nouveau mot de passe", class: "form-control", class: "btn btn-lg btn-success" %>
             </div>
             <br>
-            <h4 class="h4 mb-3 font-weight-normal text-center"> Ou</h4>
+            <h5 class="h4 mb-3 font-weight-normal text-center"> ou</h5>
             <div class="d-flex justify-content-center">
-                <a href="/devise/sign_in">Se connecter</a> &nbsp;
+                <p> J'ai déjà un compte, alors: <a href="/devise/sign_in"> se connecter</a> &nbsp;</p>
             </div>
             <div class="d-flex justify-content-center">
-                <a href="/devise/sign_up">S'inscrire</a>
+                <p>Vous n'avez pas encore de compte? <a href="/devise/sign_up">S'inscrire !</a></p>
             </div>
             <% end %>
         </div>

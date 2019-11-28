@@ -3,24 +3,32 @@
   <head>
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
+ 
   <body>
-  <h2>Bonjour,
+  <p>Bonjour,</p>
     <br>
-    Un nouvel achat a été effectué par le client <%=@user %>, le <%= @order.created_at %>  sur le site de la boutique Bamby-boutique! </h2>
+    	<p>Un nouvel achat a été effectué par le client <strong><%=@user.email %></strong>, le <strong><%= @order.created_at.strftime("%d/%m/%Y à %k:%M") %></strong>  sur le site Bamby-boutique! </p>
     <br>
-    <p>Numéro de commande: <%= @order.id %></p>
-    <p>Articles commandés :
-    <center>
-    <ul> <%= @order.order_items.each do |order_item| %>
-    <li> <% order_item.item.title %></li>
-    <%end%>
-    </ul>
+    	<p>Numéro de commande: <%= @order.order_reference %></p>
+    	
+    	<p>Articles commandés :
+
+    	<ul> <% @order.order_items.each do |order_item| %>
+    			<li> <%= order_item.item.title %></li>
+    		<%end%>
+    		</ul>
+    	</p>
     <br>
-    <h1>Veuillez effetuer l'expédition rapidement!</h1>
+
+    <p> Total de la commande : <%= @order.total_order %> €</p>
+    <br>
+    <center>Veuillez effectuer l'expédition rapidement!</center>
     <br>
     <p>Merci !</p>
     <br>
     <br>
- L'Administrateur,
+		<p><strong>L'Administrateur,</strong><p>
+
   </body>
+
 </html>
