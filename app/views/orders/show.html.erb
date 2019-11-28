@@ -1,8 +1,20 @@
-<h2>My orders</h2>
+<div class="container">
+<br>
+<div class="card">
+    <div class="card-header">
+      <h4>Ma commande</h4>
+      </div>
 
-  <p>Numéro de commande: <%= order.id %></p>
-  <p>Articles commandés :
+  <p><b>Numéro de commande:</b> <%= @order.order_reference %></p>
+  <p><b>Article commandé le:</b> <%= @order.created_at.to_date%></p>
   <ul>
-    <li>
-    </li>
+  <% @order_items_array.each do |item|%>
+    <li><b>Titre:</b><%=Item.find(item.item_id).title %></li>
+    <li><b>Prix: </b><%=Item.find(item.item_id).price %> euros </li>
+    <li><b>Description:</b> <%=Item.find(item.item_id).description %></li>
+    <li><%= image_tag Item.find(item.item_id).image_url %></li><br>
+    <% end %>
+
   </ul>
+</div>
+</div>
