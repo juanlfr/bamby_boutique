@@ -8,17 +8,17 @@
             <%= render "devise/shared/error_messages", resource: resource %>
 
             <div class="form-group">
-                <%= f.label :email, "Email" %><br />
+                <%= f.label :email, "Email" %>
                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
             </div>
-
+              <br/>
             <div class="form-group">
-                <%= f.label :password %><br />
+                <%= f.label :password %>
                 <%= f.password_field :password, autocomplete: "password", class: "form-control" %>
             </div>
 
             <div class="actions mt-4 d-flex justify-content-center">
-                <%= f.submit "Se connecter", class: "btn btn-lg btn-primary" %>
+                <%= f.submit "Se connecter", class: "flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" %>
             </div>
             <br/>
             <h4 class="h4 mb-3 font-weight-normal text-center"> Ou</h4>

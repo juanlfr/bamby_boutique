@@ -7,11 +7,7 @@
     <div class="card-body">
         <div class="card-text">
             <ul>
-                <li class="h6">Nom : </li>
-                <li class="h6">Prénom : </li>
-                <li class="h6">Adresse : </li>
                 <li class="h6">Email : <%= @user.email %></li>
-                <li class="h6">Téléphone : </li>
             </ul>
         </div>
         <br />
@@ -33,15 +29,11 @@
             <li>Commande nº <%= order.order_reference %> &nbsp; &nbsp; &nbsp; &nbsp; Commandé le: <%= order.created_at.to_date %></li>
             </ul>
         <% end %>
-
         </div>
-        <br />
+        <br/>
     </div>
     <div class="card-footer text-muted">
       <a href="<%= root_path %>" class="btn btn-primary">Revenir aux produits</a>
     </div>
 </div>
 </div>
-
-
-

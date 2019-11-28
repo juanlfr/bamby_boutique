@@ -4083,6 +4083,7 @@ tbody.collapse.show {
   margin-bottom: 2rem;
   background-color: #e9ecef;
   border-radius: 0.3rem;
+  min-height: 100%;
 }
 
 @media (min-width: 576px) {

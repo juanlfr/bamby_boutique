@@ -2,8 +2,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-<a class="navbar-brand white" <%= link_to "BambyBoutique", root_path %></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a href="<%= root_path %>" class="navbar-brand dark">
+    <img src="<%= image_path("icons/logo.png") %>" alt="IMG-LOGO" class="new-size dark">
+  </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -11,18 +13,27 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link white" <%= link_to "Accueil", root_path %></a>
+      <a class="nav-link dark" <%= link_to "Accueil", root_path %></a>
     </li>
   </ul>
 </div>
     <% if user_signed_in? %>
-    <div class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Mon profil
+    <div class="nav-link resize">
+    <%= link_to cart_path(current_user.cart.id), method: :get do %>
+    <i class="fa fa-shopping-bag fa-2x dark"></i>
+    </div>
+    <%end%>
+    <div class="nav-item">
+      <div class="nav-link">
+        <span class="linedivide1"></span>
+      </div>
+    </div>
+    <div class="nav-item dropdown no-margin">
+      <a class="nav-link dropdown-toggle dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-user fa-2x"></i>
       </a>
       <div class="dropdown-menu margin-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" <%= link_to "Mon profil", current_user %></a>
-        <a class="dropdown-item" <%= link_to "Mon panier", cart_path(current_user.cart.id) %></a>
+        <a class="dropdown-item" <%= link_to "Voir mon profil", current_user %></a>
         <form class="button_to dropdown-item" method="post" action="/devise/sign_out">
           <input type="hidden" name="_method" value="delete">
           <input type="submit" value="Se déconnecter" class="bgc">
@@ -32,10 +43,10 @@
     </div>
     <%else%>
     <div class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        S'inscrire / Se connecter
+      <a class="nav-link dropdown-toggle dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-user fa-2x"></i>
       </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu margin-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" <%= link_to "S'inscrire", new_user_registration_path%></a>
         <a class="dropdown-item" <%= link_to "Se connecter", user_session_path %></a>
       </div>
