@@ -3,9 +3,25 @@ class Order < ApplicationRecord
   has_many :items, through: :order_items
   belongs_to :user
 
-def order_email
-  #UserMailer.order_email(self).deliver_later
-  #
-end
+  after_create :order_email
+  after_create :admin_order_mail
+
+  def total_order
+    sum = 0
+    self.order_items.each do |order_item|
+      sum+= order_item.total_by_item
+    end
+    return sum
+  end
+
+  def order_email
+    UserMailer.order_email(self).deliver_now
+  end
+
+  def admin_order_email
+    UserMailer.admin_order_email(self).deliver_now
+  end
+
+
 
 end
