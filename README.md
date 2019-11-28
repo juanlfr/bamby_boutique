@@ -23,8 +23,9 @@ Son panier poura être modifier en ajoutant, ou en supprimant les quantités du 
 Enfin, il recevra par email les produits commandés. A son tour, l'administrateur du site recevra un email pour lui annoncer qu'une photo vient d'être vendue.
 
 >D'autres fonctions du site:
-Un visiteur non connecté ne peut pas passer de commande.
-L'utilisateur peut modifier son profil et consulter toutes ses commandes passées chez Bamby-boutique!
+
+-Un visiteur non connecté ne peut pas passer de commande.
+-L'utilisateur peut modifier son profil et consulter toutes ses commandes passées chez Bamby-boutique!
 
 
 >Quelles sont les futures implémentations à venir dans l'eboutique?
@@ -42,9 +43,12 @@ A bientôt!
 
 L'équipe qui a pris un inmmense plaisir pour vous présente sa belle e-boutique:
 
--https://github.com/Emilie-thp
--https://github.com/kwouix
--https://github.com/juanlfr
--https://github.com/Dstrasbg
+>https://github.com/Emilie-thp
+
+>https://github.com/kwouix
+
+>https://github.com/juanlfr
+
+>https://github.com/Dstrasbg
 
 * Novembre 2019
