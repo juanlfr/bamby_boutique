@@ -3,7 +3,8 @@ class Order < ApplicationRecord
   has_many :items, through: :order_items
   belongs_to :user
   after_create :order_email
-
+  validates :order_reference, uniqueness: true
+  
 
   def total_order
     sum = 0
