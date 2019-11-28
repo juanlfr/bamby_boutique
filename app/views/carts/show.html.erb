@@ -33,7 +33,7 @@
 											</div>
 
 											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="<%=line_item.quantity%>">
-											
+
 											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
 											<%= link_to line_item_add_path(:id => line_item), method: :post do%>
 												<i class="fa fa-plus"></i>
@@ -62,7 +62,10 @@
 		</div>
 	</form>
 <div class="container">
-	<div class="d-flex justify-content-center">
-   	<%= link_to "Valider ma commande", new_charge_path, class: "btn btn-lg btn-primary"  %>
+	<div class="row d-flex justify-content-center">
+		<%= form_tag charges_path do %>
+			<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="Votre commande" data-amount="<%=@price%>" data-currency="eur" data-locale="auto">
+				<%end%>
+</script>
 	</div>
 </div>
