@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
         mail(
             from: 'bamby.boutique.thp@gmail.com',
             to: @user.email,
-            subject: 'Bambyboutique, Merci pour votre achat!'
+            subject: 'Bamby-boutique: merci pour votre achat!'
             ) 
     end
 
@@ -37,7 +37,7 @@ class UserMailer < ApplicationMailer
         mail(
             from: 'bamby.boutique.thp@gmail.com',
             to: 'bamby.boutique.thp@gmail.com',
-            subject: 'ADMIN: Un nouvel achat a été effectué sur le site'
+            subject: ':ADMIN: Nouvel achat à expédier'
             ) 
     end
 

@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Bonjour <%= @user.email %> et bienvenue chez Bambyboutique !</h1>
-    <p>Vous avez effectué un achat sur notre site et nous vous remercions pour votre confiance.</p>
+    <p>Vous avez effectué un achat le <%= @order.created_at.strftime("%d/%m/%Y à %k:%M") %> sur notre site et nous vous en remercions pour votre confiance.</p>
     <br>
     <p>Numéro de commande: <%= @order.id %></p>
     <p>Articles commandés :
