@@ -9,7 +9,7 @@ before_action :authenticate_user!
     @order = Order.find(params[:id])
     @order_items_array = Order.find(params[:id]).order_items
    
-  
+
 
   end
 
