@@ -22,7 +22,7 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  config.action_mailer.default_url_options = { :host => 'bamby-boutique-development.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'bamby-boutique.herokuapp.com' }
 
   config.action_mailer.delivery_method = :mailjet_api
 
