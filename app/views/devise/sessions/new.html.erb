@@ -1,36 +1,34 @@
-<div class="d-flex justify-content-center">
 <div class="container">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <br><br><br>
-      <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: "form-signin mt-3" } do |f| %>
-        <h1 class="h3 mb-3 font-weight-normal text-center">Connectez-vous</h1>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <br><br><br>
+            <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: "form-signin mt-3" } do |f| %>
+            <h1 class="h3 mb-3 font-weight-normal text-center">Connectez-vous</h1>
 
-        <%= render "devise/shared/error_messages", resource: resource %>
+            <%= render "devise/shared/error_messages", resource: resource %>
 
-        <div class="form-group">
-          <%= f.label :email, "Email" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+            <div class="form-group">
+                <%= f.label :email, "Email" %><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password %><br />
+                <%= f.password_field :password, autocomplete: "password", class: "form-control" %>
+            </div>
+
+            <div class="actions mt-4 d-flex justify-content-center">
+                <%= f.submit "Se connecter", class: "btn btn-lg btn-primary" %>
+            </div>
+            <br/>
+            <h4 class="h4 mb-3 font-weight-normal text-center"> Ou</h4>
+            <div class="d-flex justify-content-center">
+                <a href="/devise/sign_up">S'inscrire</a> &nbsp;
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="/devise/password/new">Mot de passe oublié?</a>
+            </div>
+            <% end %>
         </div>
-
-        <div class="form-group">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "password", class: "form-control" %>
-        </div>
-
-        <div class="actions mt-4">
-          <%= f.submit "Sign in", class: "btn btn-lg btn-primary btn-block" %>
-        </div>
-      <% end %>
-
-      <br>
-      <center><h5> ou: </h5>
-    <br>
-    <div class="actions mt-3">
-      <%= render "devise/shared/links", class: "btn btn-lg btn-primary" %>
-      <br>
-      </div>
     </div>
-  </div>
-</div>
 </div>
