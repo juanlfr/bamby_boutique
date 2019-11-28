@@ -212,13 +212,10 @@ Devise.setup do |config|
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
   # change their passwords.
-  config.reset_password_within = 1.hours
+  config.reset_password_within = 6.hours
 
   # When set to false, does not sign a user in automatically after their password is
-  # reset. Defaults to true, so a user is signed in automatically after a reset.
-  # config.sign_in_after_reset_password = true
-
-  # ==> Configuration for :encryptable
+  # reset. Defaults to true, so a user is signed in automatical2019-11-28 10:51:35 UTC 
   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).
   # You can use :sha1, :sha512 or algorithms from others authentication tools as
   # :clearance_sha1, :authlogic_sha512 (then you should set stretches above to 20
@@ -239,10 +236,7 @@ Devise.setup do |config|
   # config.default_scope = :user
 
   # Set this configuration to false if you want /users/sign_out to sign out
-  # only the current scope. By default, Devise signs out all scopes.
-  # config.sign_out_all_scopes = true
-
-  # ==> Navigation configuration
+  # only the current scope. By default, Devise signs out all sc2019-11-28 10:51:35 UTC 
   # Lists the formats that should be treated as navigational. Formats like
   # :html, should redirect to the sign in page when the user does not have
   # access, but formats like :xml or :json, should return 401.
@@ -278,7 +272,7 @@ Devise.setup do |config|
   #     mount MyEngine, at: '/my_engine'
   #
   # The router that invoked `devise_for`, in the example above, would be:
-  # config.router_name = :my_engine
+  # config.router_name = :my_engine2019-11-28 10:51:35 UTC 
   #
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
@@ -289,12 +283,8 @@ Devise.setup do |config|
   #
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
-  # end
-
-  # ==> Configuration for :registerable
-
+  # end2019-11-28 10:51:35 UTC 
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 end
-_item

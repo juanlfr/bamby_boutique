@@ -6,7 +6,7 @@
   <body>
   <h2>Bonjour,
     <br>
-    Un nouvel achat a été effectué par le client <%=@user>, le <% order.order_item.datetime %>  sur le site de la boutique Bamby-boutique! </h2>
+    Un nouvel achat a été effectué par le client <%=@user %>, le <%= @order.created_at %>  sur le site de la boutique Bamby-boutique! </h2>
     <br>
     <p>Numéro de commande: <%= @order.id %></p>
     <p>Articles commandés :
