@@ -11,6 +11,7 @@ require 'faker'
 Item.destroy_all
 LineItem.destroy_all
 Order.destroy_all
+OrderItem.destroy_all
 
 deer = ["https://cdn.pixabay.com/photo/2018/10/07/11/49/fallow-deer-3729821_960_720.jpg",
   "https://cdn.pixabay.com/photo/2017/09/24/20/49/biche-2783169_960_720.jpg",
@@ -33,17 +34,15 @@ deer = ["https://cdn.pixabay.com/photo/2018/10/07/11/49/fallow-deer-3729821_960_
   "https://cdn.pixabay.com/photo/2019/11/16/13/43/doe-4630298_960_720.jpg",
   "https://images.unsplash.com/photo-1571148739914-738933765537?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"]
 
-name = ["Bibiche", "Son of a biche", "Biche oh my biche", "Biche volley", "Bambiche", "Colombiche", "Bichel Siemen", "What a biche", "Dark Vabich", "Bichel Berger", "Biche Club", "Bichon futé", "Bichette", "Biche France", "Eddy Bichel", "Lady Bibiche", "Biche Hallyday", "David Bowbiche", "Bichel Obama", "Guide Bichelin"]
+name = ["Bibiche", "Son of a biche", "Biche oh my biche", "Biche volley", "Bambiche", "Colombiche", "Bichel Cymes", "What a biche", "Dark Vabich", "Bichel Berger", "Biche Club", "Bichon futé", "Bichette", "Biche France", "Eddy Bichel", "Lady Bibiche", "Biche Hallyday", "David Bowbiche", "Bichel Obama", "Guide Bichelin"]
 
-n = 0
 i = 0
 
 20.times do
   item = Item.create(
-    title: name[n],
-    description: Faker::Movies::Hobbit.quote,
-    price: Faker::Number.decimal(l_digits: 2),
+    title: name[i],
+    description: "Photographie d'exception d'une biche dans son cadre naturel. Un instant de magie pure, capturé par nos photographes de renom, homologués BambyBoutique. A retrouver dans vos boîtes mail... Format : 10x15cm",
+    price: Faker::Number.between(from: 5, to: 20),
     image_url: deer[i])
     i += 1
-    n += 1
 end
