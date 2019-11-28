@@ -8,10 +8,6 @@ before_action :secret, only: [:show]
 
   def show
     @order = Order.find(params[:id])
-    @order_items_array = Order.find(params[:id]).order_items
-   
-  
-
   end
 
   def new
@@ -27,8 +23,8 @@ before_action :secret, only: [:show]
     @order = Order.find(params[:id])
     @user = User.find(@order.user_id)
      unless @user.id == current_user.id
-      flash[:notice] = "Veuillez-vous connecter sur votre compte !"
-      redirect_to new_user_session_path
+      flash[:notice] = "Vous n'avez pas les droits d'accès !"
+      redirect_to root_path
        end
    end
 
