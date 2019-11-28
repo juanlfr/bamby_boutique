@@ -26,7 +26,10 @@
         <div class="card-text">
         <% @user.orders.each do |order| %>
             <ul>
-            <li>Commande nº <%= order.order_reference %> &nbsp; &nbsp; &nbsp; &nbsp; Commandé le: <%= order.created_at.to_date %></li>
+            <li>Commande nº <%= order.order_reference %> &nbsp; &nbsp; &nbsp; &nbsp; Commandé le: <%= order.created_at.to_date %>
+            &nbsp; &nbsp; &nbsp; &nbsp <a href="<%=order_path(order.id)%>" class="btn btn-primary">Voir ma commande</a></li><br>
+            
+            
             </ul>
         <% end %>
         </div>
