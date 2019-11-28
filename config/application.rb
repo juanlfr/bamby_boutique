@@ -19,6 +19,8 @@ module BambyBoutique
     # the framework and any gems in your application.
   	
   	
+config.time_zone = 'Europe/Paris'
+config.active_record.default_timezone = :local
 
   end
 end
