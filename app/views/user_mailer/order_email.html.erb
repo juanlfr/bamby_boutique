@@ -12,9 +12,7 @@
     <p>Numéro de commande: <%= @order.order_reference %></p>
     <p>Articles commandés :
     <ul> <% @order.order_items.each do |order_item| %>
-    <li> <%= order_item.item.title %></li>
-    <li> <a href='<%=order_item.item.image_url%>'> Voici le lien vers votre photo</a></li>
-   
+    <li> <%= order_item.item.title %> : <a href='<%=order_item.item.image_url%>'>lien vers votre photo</a></li>
     <%end%>
     </ul>
     <br>
