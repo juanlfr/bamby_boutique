@@ -108,3 +108,10 @@
     width: 60%;
     height: auto;
 }
+
+.trait {
+  border: 1px solid grey;
+  width: 70px;
+  margin-top: 10px;
+  margin-bottom: -15px;
+}
