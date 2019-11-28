@@ -11,7 +11,7 @@ require 'faker'
 Item.destroy_all
 LineItem.destroy_all
 
-10.times do
+20.times do
   item = Item.create(
     title: Faker::Book.title,
     description: Faker::Movies::Hobbit.quote,
