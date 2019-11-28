@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   resources :orders
   resources :order_items
   resources :charges
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  #routes for adding and reducing quantity
+  post 'line_items/:id/add' => "line_items#add_quantity", as: "line_item_add"
+  post 'line_items/:id/reduce' => "line_items#reduce_quantity", as: "line_item_reduce"
+
 end

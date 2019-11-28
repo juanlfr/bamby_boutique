@@ -23,7 +23,11 @@
       <div class="dropdown-menu margin-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" <%= link_to "Mon profil", current_user %></a>
         <a class="dropdown-item" <%= link_to "Mon panier", cart_path(current_user.cart.id) %></a>
-        <a class="dropdown-item"> <%= button_to "Se déconnecter", destroy_user_session_path,  method: :delete %></a>
+        <form class="button_to dropdown-item" method="post" action="/devise/sign_out">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Se déconnecter" class="bgc">
+          <input type="hidden" name="authenticity_token" value="He/QgAW4KGavVvCc1LnQU2n6V24dkCcxcrM20OP0pizaCN4j5S7g/UL08vg36bVX7zR2UecBw/xj6fqerZhvzg==">
+        </form>
       </div>
     </div>
     <%else%>
