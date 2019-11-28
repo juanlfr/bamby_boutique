@@ -7,15 +7,11 @@
     <div class="card-body">
         <div class="card-text">
             <ul>
-                <li class="h6">Nom : </li>
-                <li class="h6">Prénom : </li>
-                <li class="h6">Adresse : </li>
                 <li class="h6">Email : <%= @user.email %></li>
-                <li class="h6">Téléphone : </li>
             </ul>
         </div>
         <br />
-        <a href="<%= edit_user_registration_path %>" class="btn btn-success">Editer mon profil</a>
+        <a href="<%= edit_user_registration_path %>" class="btn btn-success">Modifier mon mot de passe</a>
     </div>
     <div class="card-footer text-muted">
         Compte créé le <%= @user.created_at %>
@@ -30,18 +26,17 @@
         <div class="card-text">
         <% @user.orders.each do |order| %>
             <ul>
-            <li>Commande nº <%= order.order_reference %> &nbsp; &nbsp; &nbsp; &nbsp; Commandé le: <%= order.created_at.to_date %></li>
+            <li>Commande nº <%= order.order_reference %> &nbsp; &nbsp; &nbsp; &nbsp; Commandé le: <%= order.created_at.to_date %>
+            &nbsp; &nbsp; &nbsp; &nbsp <a href="<%=order_path(order.id)%>" class="btn btn-primary">Voir ma commande</a></li><br>
+
+
             </ul>
         <% end %>
-
         </div>
-        <br />
+        <br/>
     </div>
-    <div class="card-footer text-muted">
-      <a href="<%= root_path %>" class="btn btn-primary">Revenir aux produits</a>
-    </div>
+      <div class="card-footer text-muted actions mt-4 d-flex justify-content-start">
+      <a href="<%= root_path %>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">Revenir aux produits</a>
+      </div>
 </div>
 </div>
-
-
-

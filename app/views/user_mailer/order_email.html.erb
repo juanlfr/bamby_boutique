@@ -13,16 +13,18 @@
     <p>Articles commandés :
     <ul> <% @order.order_items.each do |order_item| %>
     <li> <%= order_item.item.title %></li>
+    <li> <a href='<%=order_item.item.image_url%>'> Voici le lien vers votre photo</a></li>
+   
     <%end%>
     </ul>
     <br>
 
-    <p>Pour consulter toutes vos commandes, vous pouvez accéder à votre espace client <a href= 'https://bamby-boutique.herokuapp.com/devise/sign_in'>en cliquant ici</a>.
+    <p>Pour consulter toutes vos commandes, vous pouvez accéder à votre espace client <a href= 'https://bamby-boutique.herokuapp.com/devise/sign_in'> en cliquant ici</a>.
     </p>
     <br>
     <p>Merci !</p>
     <br>
-    <p> À très vite sur <a href='https://bamby-boutique.herokuapp.com/'> Bambyboutique!</a></p>
+    <p> À très vite sur <a href='https://bamby-boutique.herokuapp.com/'> Bambyboutique</a>!</p>
     <br>
     <br>
     L'équipe de Bamby-boutique,
