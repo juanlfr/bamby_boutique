@@ -8,6 +8,10 @@ before_action :secret, only: [:show]
 
   def show
     @order = Order.find(params[:id])
+    @order_items_array = Order.find(params[:id]).order_items
+   
+  
+
   end
 
   def new
