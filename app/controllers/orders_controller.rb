@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 before_action :authenticate_user!
+before_action :secret, only: [:show]
 
   def index
     @orders = Order.all
@@ -17,6 +18,17 @@ before_action :authenticate_user!
 
   def create
   end
+
+  private
+
+  def secret
+    @order = Order.find(params[:id])
+    @user = User.find(@order.user_id)
+     unless @user.id == current_user.id
+      flash[:notice] = "Vous n'avez pas les droits d'accès !"
+      redirect_to root_path
+       end
+   end
 
 
 end
