@@ -50,3 +50,8 @@
 .white:hover {
   color:grey !important;
 }
+
+.bgc {
+  background: none;
+  cursor: pointer;
+}
