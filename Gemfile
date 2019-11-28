@@ -36,6 +36,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 
+gem 'devise-i18n'
+
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 gem 'rails-ujs', '~> 0.1.0'

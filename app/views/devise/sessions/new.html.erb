@@ -11,7 +11,7 @@
                 <%= f.label :email, "Email" %><br />
                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
             </div>
-
+            <br>
             <div class="form-group">
                 <%= f.label :password %><br />
                 <%= f.password_field :password, autocomplete: "password", class: "form-control" %>
@@ -21,9 +21,9 @@
                 <%= f.submit "Se connecter", class: "btn btn-lg btn-primary" %>
             </div>
             <br/>
-            <h4 class="h4 mb-3 font-weight-normal text-center"> Ou</h4>
+            <h5 class="h4 mb-3 font-weight-normal text-center"> ou</h5>
             <div class="d-flex justify-content-center">
-                <a href="/devise/sign_up">S'inscrire</a> &nbsp;
+                <p>Nouveau sur Bamby-boutique? <a href="/devise/sign_up"> S'inscrire</a> &nbsp;
             </div>
             <div class="d-flex justify-content-center">
                 <a href="/devise/password/new">Mot de passe oublié?</a>
